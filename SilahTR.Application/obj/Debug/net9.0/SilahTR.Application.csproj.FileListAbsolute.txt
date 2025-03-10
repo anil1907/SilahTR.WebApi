@@ -1,0 +1,17 @@
+C:\Users\anil7\RiderProjects\SilahTR.WebApi\SilahTR.Application\bin\Debug\net9.0\SilahTR.Application.deps.json
+C:\Users\anil7\RiderProjects\SilahTR.WebApi\SilahTR.Application\bin\Debug\net9.0\SilahTR.Application.dll
+C:\Users\anil7\RiderProjects\SilahTR.WebApi\SilahTR.Application\bin\Debug\net9.0\SilahTR.Application.pdb
+C:\Users\anil7\RiderProjects\SilahTR.WebApi\SilahTR.Application\bin\Debug\net9.0\SilahTR.Domain.dll
+C:\Users\anil7\RiderProjects\SilahTR.WebApi\SilahTR.Application\bin\Debug\net9.0\SilahTR.Domain.pdb
+C:\Users\anil7\RiderProjects\SilahTR.WebApi\SilahTR.Application\obj\Debug\net9.0\SilahTR.Application.csproj.AssemblyReference.cache
+C:\Users\anil7\RiderProjects\SilahTR.WebApi\SilahTR.Application\obj\Debug\net9.0\SilahTR.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\anil7\RiderProjects\SilahTR.WebApi\SilahTR.Application\obj\Debug\net9.0\SilahTR.Application.AssemblyInfoInputs.cache
+C:\Users\anil7\RiderProjects\SilahTR.WebApi\SilahTR.Application\obj\Debug\net9.0\SilahTR.Application.AssemblyInfo.cs
+C:\Users\anil7\RiderProjects\SilahTR.WebApi\SilahTR.Application\obj\Debug\net9.0\SilahTR.Application.csproj.CoreCompileInputs.cache
+C:\Users\anil7\RiderProjects\SilahTR.WebApi\SilahTR.Application\obj\Debug\net9.0\SilahTR..ABB3901C.Up2Date
+C:\Users\anil7\RiderProjects\SilahTR.WebApi\SilahTR.Application\obj\Debug\net9.0\SilahTR.Application.dll
+C:\Users\anil7\RiderProjects\SilahTR.WebApi\SilahTR.Application\obj\Debug\net9.0\refint\SilahTR.Application.dll
+C:\Users\anil7\RiderProjects\SilahTR.WebApi\SilahTR.Application\obj\Debug\net9.0\SilahTR.Application.pdb
+C:\Users\anil7\RiderProjects\SilahTR.WebApi\SilahTR.Application\obj\Debug\net9.0\ref\SilahTR.Application.dll
+C:\Users\anil7\RiderProjects\SilahTR.WebApi\SilahTR.Application\bin\Debug\net9.0\SilahTR.Core.dll
+C:\Users\anil7\RiderProjects\SilahTR.WebApi\SilahTR.Application\bin\Debug\net9.0\SilahTR.Core.pdb
