@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SilahTR.Persistence")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f726ab43f39eb26a0b0be3675e7b0c7132fe8baf")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2d476f00a652d6ed96b6e3ec8c7b8c80a6aaf280")]
 [assembly: System.Reflection.AssemblyProductAttribute("SilahTR.Persistence")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SilahTR.Persistence")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

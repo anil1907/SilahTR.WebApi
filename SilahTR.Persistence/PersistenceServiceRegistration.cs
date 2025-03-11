@@ -1,6 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using SilahTR.Persistence.Repositories;
 
 public static class PersistenceServiceRegistration
 {
@@ -13,7 +14,7 @@ public static class PersistenceServiceRegistration
         });
 
         // Repositories
-        // services.AddScoped<IIndividualCustomerRepository, IndividualCustomerRepository>();
+        services.AddScoped<ICategoryRepository, CategoryRepository>();
         // services.AddScoped<ICorporateCustomerRepository, CorporateCustomerRepository>();
         // services.AddScoped<ICreditTypeRepository, CreditTypeRepository>();
         // services.AddScoped<ICreditApplicationRepository, CreditApplicationRepository>();

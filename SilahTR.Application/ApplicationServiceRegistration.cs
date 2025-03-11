@@ -1,6 +1,7 @@
 using System.Reflection;
 using FluentValidation;
 using Microsoft.Extensions.DependencyInjection;
+using SilahTR.Application.Features.Categories.Rules;
 
 public static class ApplicationServiceRegistration
 {
@@ -14,7 +15,7 @@ public static class ApplicationServiceRegistration
         services.AddValidatorsFromAssembly(Assembly.GetExecutingAssembly());
 
         // Business Rules
-        // services.AddScoped<IndividualCustomerBusinessRules>();
+        services.AddScoped<CategoryBusinessRules>();
         // services.AddScoped<CorporateCustomerBusinessRules>();
 
         return services;
