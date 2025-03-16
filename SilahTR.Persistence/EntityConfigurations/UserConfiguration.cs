@@ -5,21 +5,19 @@ using SilahTR.Domain.Entities;
 
 namespace SilahTR.Persistence.EntityConfigurations
 {
-    public class CategoryConfiguration : IEntityTypeConfiguration<Category>
+    public class UserConfiguration: IEntityTypeConfiguration<User>
     {
-        public void Configure(EntityTypeBuilder<Category> builder)
+        public void Configure(EntityTypeBuilder<User> builder)
         {
-            builder.ToTable(nameof(Category).Pluralize().Underscore(), ApplicationDbContext.DefaultSchema);
-
-            builder.Property(c => c.Name)
+            builder.Property(c => c.FirstName)
                 .HasMaxLength(200)
                 .IsRequired();
             
-            builder.Property(c => c.DisplayOrder)
+            builder.Property(c => c.LastName)
                 .HasDefaultValue(0)
                 .IsRequired();
-            
-            builder.Property(c => c.IsActive)
+
+            builder.ComplexProperty(c => c.IdentityNumber)
                 .IsRequired();
         }
     }

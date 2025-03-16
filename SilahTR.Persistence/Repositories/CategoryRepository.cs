@@ -2,9 +2,9 @@ using SilahTR.Domain.Entities;
 
 namespace SilahTR.Persistence.Repositories
 {
-    public class CategoryRepository : EfRepositoryBase<Category, Guid, BaseDbContext>, ICategoryRepository
+    public class CategoryRepository : EfRepositoryBase<Category, Guid, ApplicationDbContext>, ICategoryRepository
     {
-        public CategoryRepository(BaseDbContext context) : base(context)
+        public CategoryRepository(ApplicationDbContext context) : base(context)
         {
         }
     }
