@@ -2,6 +2,7 @@ using Humanizer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using SilahTR.Domain.Entities;
+using SilahTR.Persistence.Contexts;
 
 namespace SilahTR.Persistence.EntityConfigurations
 {

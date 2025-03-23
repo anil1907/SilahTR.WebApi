@@ -1,4 +1,5 @@
 using SilahTR.Domain.Entities;
+using SilahTR.Persistence.Contexts;
 
 namespace SilahTR.Persistence.Repositories
 {

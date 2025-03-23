@@ -2,12 +2,13 @@ using Humanizer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using SilahTR.Domain.Entities;
+using SilahTR.Domain.Entities.Identity;
 
 namespace SilahTR.Persistence.EntityConfigurations
 {
-    public class UserConfiguration: IEntityTypeConfiguration<User>
+    public class UserConfiguration: IEntityTypeConfiguration<ApplicationUser>
     {
-        public void Configure(EntityTypeBuilder<User> builder)
+        public void Configure(EntityTypeBuilder<ApplicationUser> builder)
         {
             builder.Property(c => c.FirstName)
                 .HasMaxLength(200)
@@ -17,8 +18,8 @@ namespace SilahTR.Persistence.EntityConfigurations
                 .HasDefaultValue(0)
                 .IsRequired();
 
-            builder.ComplexProperty(c => c.IdentityNumber)
-                .IsRequired();
+            // builder.ComplexProperty(c => c.IdentityNumber)
+            //     .IsRequired();
         }
     }
 }

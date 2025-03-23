@@ -1,7 +1,9 @@
 using System.Reflection;
 using FluentValidation;
 using Microsoft.Extensions.DependencyInjection;
+using SilahTR.Application.Common.Interfaces;
 using SilahTR.Application.Features.Categories.Rules;
+using SilahTR.Application.Services.Auth;
 
 public static class ApplicationServiceRegistration
 {
@@ -16,7 +18,8 @@ public static class ApplicationServiceRegistration
 
         // Business Rules
         services.AddScoped<CategoryBusinessRules>();
-        // services.AddScoped<CorporateCustomerBusinessRules>();
+        
+        services.AddScoped<IAuthService, AuthService>();
 
         return services;
     }

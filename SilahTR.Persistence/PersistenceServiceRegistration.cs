@@ -1,10 +1,13 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using SilahTR.Persistence.Repositories;
 using Microsoft.AspNetCore.Identity;
 using SilahTR.Application.Common.Contracts;
-using SilahTR.Domain.Entities;
+using SilahTR.Domain.Entities.Identity;
+using SilahTR.Persistence.Contexts;
+using SilahTR.Persistence.Repositories;
+
+namespace SilahTR.Persistence;
 
 public static class PersistenceServiceRegistration
 {
@@ -19,27 +22,35 @@ public static class PersistenceServiceRegistration
 
         services.AddDataProtection();
         
-        services.AddIdentityCore<User>(options =>
+        services.AddIdentity<ApplicationUser, IdentityRole<Guid>>(options =>
             {
+                // Password settings
+                options.Password.RequireDigit = true;
+                options.Password.RequiredLength = 8;
+                options.Password.RequireNonAlphanumeric = true;
+                options.Password.RequireUppercase = true;
+                options.Password.RequireLowercase = true;
+
+                // Token settings
                 options.Tokens.EmailConfirmationTokenProvider = "EmailConfirmationTokenProvider";
                 options.Tokens.PasswordResetTokenProvider = "PasswordResetTokenProvider";
 
-                options.Lockout.DefaultLockoutTimeSpan = TimeSpan.FromDays(365 * 100);
-                options.Lockout.MaxFailedAccessAttempts = 5; // jwtConfig.MaxFailedAccessAttemts
+                // Lockout settings
+                options.Lockout.DefaultLockoutTimeSpan = TimeSpan.FromMinutes(30);
+                options.Lockout.MaxFailedAccessAttempts = 5;
                 options.Lockout.AllowedForNewUsers = true;
+
+                // User settings
+                options.User.RequireUniqueEmail = true;
             })
-            .AddRoles<Role>()
             .AddEntityFrameworkStores<ApplicationDbContext>()
             .AddDefaultTokenProviders()
             .AddApiEndpoints();
 
-        
         services.AddScoped<IApplicationDbContext>(provider => provider.GetRequiredService<ApplicationDbContext>());
+        
         // Repositories
         services.AddScoped<ICategoryRepository, CategoryRepository>();
-        // services.AddScoped<ICorporateCustomerRepository, CorporateCustomerRepository>();
-        // services.AddScoped<ICreditTypeRepository, CreditTypeRepository>();
-        // services.AddScoped<ICreditApplicationRepository, CreditApplicationRepository>();
 
         return services;
     }
