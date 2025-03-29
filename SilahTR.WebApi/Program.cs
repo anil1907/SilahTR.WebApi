@@ -1,4 +1,5 @@
 using SilahTR.Persistence;
+using SilahTR.WebApi.Infrastructure;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -26,6 +27,6 @@ app.UseCustomExceptionMiddleware();
 
 app.UseAuthorization();
 
-app.MapControllers();
+app.MapEndpoints();
 
 app.Run();
