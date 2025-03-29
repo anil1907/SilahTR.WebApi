@@ -19,4 +19,8 @@
         <ProjectReference Include="..\SilahTR.Domain\SilahTR.Domain.csproj" />
     </ItemGroup>
 
+    <ItemGroup>
+      <Folder Include="Common\Models\" />
+    </ItemGroup>
+
 </Project>

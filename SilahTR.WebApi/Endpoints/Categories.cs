@@ -10,7 +10,7 @@ public class Categories : EndpointGroupBase
 {
     public override void Map(WebApplication app)
     {
-        app.MapGet("/addresses/cities", GetCities);
+        app.MapGet("/addresses/cities", GetCities).RequireAuthorization("User");
     }
     
     public async Task<Paginate<CategoryResponse>> GetCities(ISender sender, [AsParameters] GetListCategoryQuery query, CancellationToken cancellationToken)
