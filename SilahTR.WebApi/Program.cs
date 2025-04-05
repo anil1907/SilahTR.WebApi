@@ -1,16 +1,17 @@
+using SilahTR.Infrastructure;
 using SilahTR.Persistence;
 using SilahTR.WebApi.Infrastructure;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-// Application & Persistence Service Registrations
 builder.Services.AddApplicationServices();
 builder.Services.AddPersistenceServices(builder.Configuration);
+builder.Services.AddInfrastructureServices(builder.Configuration);
+
 
 var app = builder.Build();
 
@@ -24,7 +25,8 @@ if (app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 
 app.UseCustomExceptionMiddleware();
-
+app.UseRouting();
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapEndpoints();

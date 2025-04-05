@@ -13,4 +13,10 @@
         <PackageReference Include="Microsoft.EntityFrameworkCore.Abstractions" Version="9.0.2" />
     </ItemGroup>
 
+    <ItemGroup>
+      <Folder Include="CrossCuttingConcerns\Exceptions\HttpProblemDetails\" />
+      <Folder Include="CrossCuttingConcerns\Exceptions\Types\" />
+      <Folder Include="Repositories\" />
+    </ItemGroup>
+
 </Project>

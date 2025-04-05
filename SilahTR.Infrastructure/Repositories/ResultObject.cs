@@ -1,4 +1,4 @@
-namespace SilahTR.Core.Repositories
+namespace SilahTR.Infrastructure.Repositories
 {
     public class ResultObject<T>
     {
